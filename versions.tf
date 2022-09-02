@@ -3,6 +3,7 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 terraform {
+  experiments      = [module_variable_optional_attrs]
   required_version = "~> 1.0"
 
   # 4.7.0 to 4.9.1 has a security regression: new repositories created via a
