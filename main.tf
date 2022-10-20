@@ -135,7 +135,7 @@ resource "github_repository" "repository" {
   lifecycle {
     ignore_changes = [
       auto_init,
-      branches,
+      #branches,
       license_template,
       gitignore_template,
       template,
