@@ -180,7 +180,7 @@ resource "github_branch_default" "default" {
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection
 # ---------------------------------------------------------------------------------------------------------------------
 
-resource "github_branch_protection" "this" {
+resource "github_branch_protection" "branch_protection" {
   for_each = length(coalesce(var.branch_protections_v4, {})) != 0 ? var.branch_protections_v4 : {}
 
   # ensure we have all members and collaborators added before applying
