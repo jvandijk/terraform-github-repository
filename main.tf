@@ -181,7 +181,7 @@ resource "github_branch_default" "default" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 resource "github_branch_protection" "this" {
-  for_each = var.branch_protections_v4
+  for_each = var.branch_protections_v4 != null ? var.branch_protections_v4 : {}
 
   # ensure we have all members and collaborators added before applying
   # any configuration for them
